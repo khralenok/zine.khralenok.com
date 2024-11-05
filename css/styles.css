@@ -1,0 +1,282 @@
+:root {
+  --accent: #ff4b00;
+  --accent-light: #ff7800;
+  --black: #050f14;
+  --gray900: #0c1824;
+  --gray800: #2d3741;
+  --gray200: #dee0e2;
+  --gray100: #ebedf0;
+  --white: #f5f7fa;
+  color: var(--white);
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--black);
+  font-size: 1.25rem;
+}
+
+img {
+  max-width: 100%;
+}
+h1 {
+  text-transform: uppercase;
+  font-size: 2.75rem;
+}
+
+a:link,
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+button {
+  font-size: 1.25rem;
+  background: var(--accent);
+  color: var(--black);
+  padding: 0.75rem 1.5rem;
+  border-radius: 5rem;
+  border: none;
+}
+
+button.secondary {
+  border: 1px solid var(--accent);
+  background: none;
+  color: var(--accent);
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+section.contrast {
+  background: var(--accent);
+  color: var(--black);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 80em;
+  margin: 4rem 0;
+}
+
+.component.title {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: right;
+}
+
+.container.two-col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.molecule {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.container.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#text,
+#image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.component.cover {
+  background: var(--gray900);
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  width: 30em;
+  aspect-ratio: 3 / 4;
+  border-radius: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+.component.cover > img {
+  flex-grow: 1;
+}
+
+.title.cover {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.heading.cover {
+  grid-column: span 2;
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: var(--accent);
+}
+
+.subheading.cover {
+  font-size: 1rem;
+}
+
+.subheading.cover[side='left'] {
+  text-align: left;
+}
+.subheading.cover[side='right'] {
+  text-align: right;
+}
+
+.component.carousel {
+  display: block;
+  white-space: nowrap;
+  width: 100%;
+  overflow-x: scroll;
+}
+
+.nft-card {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  padding: 1.5rem 1.5rem 3rem 1.5rem;
+  background-color: var(--accent);
+  color: var(--white);
+  width: 20em;
+  margin-right: 1rem;
+  aspect-ratio: 3/4;
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+
+.nft-card-image img {
+  border-radius: 0.5rem;
+}
+
+.nft-card-text {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+.nft-card-text > h3 {
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+.nft-quotation-mark {
+  font-size: 4rem;
+}
+.nft-card-number {
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-light);
+  border-radius: 0 0 1rem 0;
+  font-size: 1.125rem;
+  font-weight: bold;
+  border-right: 1px solid var(--white);
+  border-bottom: 1px solid var(--white);
+}
+
+.nft-card-button {
+  position: absolute;
+  inset: auto 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+  border-radius: 1rem 0 0 0;
+  padding: 0 1rem;
+  background: var(--accent-light);
+  border-left: 1px solid var(--white);
+  border-top: 1px solid var(--white);
+}
+
+.nft-card-button > a {
+  color: inherit;
+}
+
+.card.quote {
+  display: flex;
+  width: 50em;
+  padding: 2rem;
+  align-items: start;
+  background: var(--gray900);
+  gap: 2rem;
+  border-radius: 2rem;
+}
+
+.component.quote {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 2rem;
+}
+
+.card.quote img {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  border-top: 2px solid var(--gray800);
+  padding: 4rem 2rem;
+  gap: 2rem;
+  color: var(--gray800);
+}
+
+.component.footer-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  color: inherit;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: color 250ms;
+}
+.logo:hover {
+  color: var(--white);
+}
+
+.svg-icon {
+  text-decoration: none;
+  color: inherit;
+}
+
+.svg-icon svg {
+  fill: var(--gray800);
+  width: 2rem;
+  height: 2rem;
+  transition: fill 250ms;
+}
+
+.svg-icon:hover svg {
+  fill: var(--white);
+}
